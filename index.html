@@ -423,15 +423,15 @@
       </dl>
     </div>
 
-    <div class="countdown" id="countdown">
-      <span class="cd-label">受付開始まで</span>
-      <span class="cd-time" id="cdTime">— 日 — : — : —</span>
-      <span class="cd-when">6月29日（月）朝9:00 解禁</span>
+    <div class="countdown open" id="countdown">
+      <span class="cd-label">ただいま受付中です</span>
+      <span class="cd-time" id="cdTime">お申し込みはこちらから</span>
+      <span class="cd-when">モニター価格・先着15名さま</span>
     </div>
 
-    <a class="btn locked" id="ctaBtn" href="javascript:void(0)" aria-disabled="true">
-      <span id="ctaText">受付開始までお待ちください</span>
-      <small id="ctaSub">6月29日（月）朝9:00 から押せるようになります</small>
+    <a class="btn" id="ctaBtn" href="https://inzwuip2.autosns.app/line" target="_blank" rel="noopener">
+      <span id="ctaText">仕入れコースについての詳細を見て、<br>モニター詳細を確認する</span>
+      <small id="ctaSub">先着15名さま限定</small>
     </a>
     <p class="seatline">定員に達し次第、受付を終了いたします。<br><b>気になる方は、お早めにご検討くださいね。</b></p>
   </section>
@@ -442,57 +442,5 @@
   </footer>
 
 </div>
-
-<script>
-  // 受付解禁：2026年6月29日（月）朝9:00（日本時間）= 2026-06-29 00:00 UTC
-  var OPEN_TS = Date.UTC(2026, 5, 29, 0, 0, 0);
-  var CTA_URL = "https://inzwuip2.autosns.app/line";
-  var OPEN_TEXT = "仕入れコースについての詳細を見て、<br>モニター詳細を確認する";
-
-  var btn = document.getElementById('ctaBtn');
-  var ctaText = document.getElementById('ctaText');
-  var ctaSub = document.getElementById('ctaSub');
-  var cd = document.getElementById('countdown');
-  var cdTime = document.getElementById('cdTime');
-  var opened = false;
-
-  // 解禁前はクリックを無効化
-  btn.addEventListener('click', function(e){
-    if (btn.classList.contains('locked')) { e.preventDefault(); }
-  });
-
-  function pad(n){ return (n < 10 ? '0' : '') + n; }
-
-  function openCTA(){
-    opened = true;
-    btn.classList.remove('locked');
-    btn.removeAttribute('aria-disabled');
-    btn.setAttribute('href', CTA_URL);
-    btn.setAttribute('target', '_blank');
-    btn.setAttribute('rel', 'noopener');
-    ctaText.innerHTML = OPEN_TEXT;
-    ctaSub.textContent = '先着15名さま限定';
-    cd.classList.add('open');
-    cd.querySelector('.cd-label').textContent = 'ただいま受付中です';
-    cdTime.textContent = 'お申し込みはこちらから';
-    cd.querySelector('.cd-when').textContent = 'モニター価格・先着15名さま';
-  }
-
-  function tick(){
-    var diff = OPEN_TS - Date.now();
-    if (diff <= 0){
-      if (!opened) openCTA();
-      return;
-    }
-    var d = Math.floor(diff / 86400000);
-    var h = Math.floor((diff % 86400000) / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    var s = Math.floor((diff % 60000) / 1000);
-    cdTime.textContent = d + ' 日 ' + pad(h) + ' : ' + pad(m) + ' : ' + pad(s);
-  }
-
-  tick();
-  setInterval(tick, 1000);
-</script>
 </body>
 </html>
