@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Re:che 仕入れコース｜モニター価格で先着15名さま募集</title>
+<style>
+  :root{
+    --navy:#26405f;
+    --navy-deep:#1d3149;
+    --ink:#4a4446;
+    --sub:#857f83;
+    --blue:#7fb0d2;
+    --blue-bg:#eaf3fa;
+    --blue-soft:#f1f7fb;
+    --blue-line:#d7e6f0;
+    --pink:#cf8f9c;
+    --pink-deep:#bd7886;
+    --pink-bg:#fbeef1;
+    --pink-soft:#f7e3e8;
+    --pink-line:#eccdd4;
+    --card:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Yu Gothic","YuGothic","游ゴシック","Hiragino Kaku Gothic ProN",sans-serif;
+    color:var(--ink);
+    background:var(--blue-soft);
+    line-height:1.8;
+    font-size:15px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:600px;margin:0 auto;background:var(--blue-soft);overflow:hidden;}
+  section{padding:58px 26px;}
+  .eyebrow{
+    font-size:12px;letter-spacing:0.2em;color:var(--pink-deep);
+    font-weight:700;text-align:center;margin-bottom:14px;
+  }
+  h2.title{
+    font-size:23px;font-weight:800;letter-spacing:0.02em;color:var(--navy);
+    text-align:center;line-height:1.55;margin-bottom:8px;
+  }
+  .lead{
+    text-align:center;color:var(--sub);font-size:14px;
+    max-width:440px;margin:0 auto;
+  }
+  .divider{width:38px;height:2px;background:var(--pink);margin:18px auto 30px;border-radius:2px;}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(160deg,#eaf3fa 0%,#f3f0f6 55%,#fbeef1 100%);
+    padding:58px 26px 50px;text-align:center;position:relative;
+  }
+  .hero .brand{
+    font-size:13px;letter-spacing:0.28em;font-weight:700;margin-bottom:18px;
+    background:linear-gradient(90deg,#cf8f9c 0%,#a98bbf 50%,#7fb0d2 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    display:inline-block;
+  }
+  .hero .brand b{font-weight:700;}
+  .hero .label{
+    display:inline-block;font-size:12px;letter-spacing:0.1em;font-weight:700;
+    color:#fff;background:var(--pink-deep);border-radius:999px;padding:6px 18px;margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:31px;font-weight:800;letter-spacing:0.01em;color:var(--navy);
+    line-height:1.5;margin-bottom:20px;
+  }
+  .hero h1 .em{color:var(--pink-deep);}
+  .hero h1 .big{font-size:40px;}
+  .hero .sub{
+    font-size:14.5px;color:#5d5860;line-height:1.95;max-width:420px;margin:0 auto 30px;
+  }
+  .hero .openday{
+    font-size:13px;color:var(--navy);font-weight:700;letter-spacing:0.04em;
+  }
+  .hero .openday b{color:var(--pink-deep);font-size:16px;}
+  .hero .opennote{margin-top:7px;font-size:11.5px;color:var(--sub);letter-spacing:0.02em;}
+
+  /* 共感 */
+  .empathy{background:var(--card);}
+  .empathy .qbox{
+    border:1px solid var(--blue-line);border-radius:16px;
+    background:var(--blue-bg);padding:22px 22px;margin-bottom:14px;position:relative;
+  }
+  .empathy .qbox p{font-size:15px;font-weight:600;line-height:1.75;padding-left:30px;color:var(--navy);}
+  .empathy .qbox::before{
+    content:"";position:absolute;left:22px;top:25px;
+    width:13px;height:13px;border-radius:50%;border:3px solid var(--pink-line);
+  }
+  .empathy .answer{
+    text-align:center;margin-top:30px;font-size:17px;font-weight:800;line-height:1.7;color:var(--navy);
+  }
+  .empathy .answer .em{color:var(--pink-deep);}
+
+  /* できること */
+  .can{background:var(--blue-bg);}
+  .canitem{
+    background:var(--card);border-radius:16px;padding:26px 22px;
+    margin-bottom:16px;border:1px solid var(--blue-line);
+    display:flex;gap:18px;align-items:flex-start;
+    box-shadow:0 4px 14px rgba(38,64,95,0.05);
+  }
+  .canitem .no{
+    flex:0 0 auto;width:36px;height:36px;border-radius:10px;
+    background:var(--navy);color:#fff;font-weight:800;font-size:16px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .canitem h3{font-size:16px;font-weight:800;margin-bottom:6px;letter-spacing:0.01em;color:var(--navy);}
+  .canitem p{font-size:13.5px;color:var(--sub);line-height:1.8;}
+
+  /* 仕入れ先（画像カード） */
+  .sources{background:var(--card);}
+  .srccard{
+    background:var(--card);border:1px solid var(--blue-line);border-radius:16px;
+    overflow:hidden;margin-bottom:18px;box-shadow:0 4px 14px rgba(38,64,95,0.06);
+  }
+  .srccard .ph{display:block;background:var(--blue-soft);border-bottom:1px solid var(--blue-line);}
+  .srccard .ph img{width:100%;display:block;}
+  .srccard .body{padding:20px 20px 22px;}
+  .srccard .head{display:flex;align-items:baseline;gap:11px;margin-bottom:8px;}
+  .srccard .num{font-size:13px;font-weight:800;color:var(--pink-deep);letter-spacing:0.08em;flex:0 0 auto;}
+  .srccard h3{font-size:16.5px;font-weight:800;color:var(--navy);letter-spacing:0.01em;line-height:1.5;}
+  .srccard p{font-size:13.5px;color:var(--sub);line-height:1.8;}
+  .srccard .hl{
+    display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--navy);
+    background:var(--pink-bg);border:1px solid var(--pink-line);border-radius:8px;padding:6px 13px;
+  }
+  .srccard .hl b{color:var(--pink-deep);font-size:16px;}
+  .srccard .hl a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--blue);}
+  .sources .note{text-align:center;margin-top:10px;font-size:13.5px;font-weight:700;color:var(--navy);}
+
+  /* 特典 */
+  .bonus{background:linear-gradient(180deg,#fbeef1 0%,#f1f7fb 100%);}
+  .bonus .openpill{
+    display:block;width:max-content;margin:0 auto 26px;
+    background:var(--pink-deep);color:#fff;font-size:13px;font-weight:700;
+    letter-spacing:0.06em;border-radius:999px;padding:9px 22px;
+  }
+  .bcard{
+    background:var(--card);border:1px solid var(--pink-line);border-radius:16px;
+    padding:24px 22px;margin-bottom:14px;position:relative;
+    box-shadow:0 4px 14px rgba(189,120,134,0.06);
+  }
+  .bcard .tag{
+    display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;
+    color:var(--pink-deep);background:var(--pink-bg);border:1px solid var(--pink-line);
+    border-radius:6px;padding:3px 10px;margin-bottom:10px;
+  }
+  .bcard h3{font-size:17px;font-weight:800;line-height:1.6;margin-bottom:8px;color:var(--navy);}
+  .bcard h3 .em{color:var(--pink-deep);}
+  .bcard p{font-size:13.5px;color:var(--sub);line-height:1.85;}
+  .bcard .price{font-size:14px;color:var(--navy);font-weight:700;margin-top:6px;}
+  .bcard .price s{color:#b3acb0;font-weight:500;margin-right:6px;}
+  .bcard .price b{color:var(--pink-deep);font-size:20px;}
+
+  /* カルテ深掘り */
+  .karte{background:var(--navy);color:#dfe7f0;}
+  .karte .eyebrow{color:#e8b9c3;}
+  .karte h2.title{color:#fff;}
+  .karte .divider{background:#e8b9c3;}
+  .karte .lead{color:#c4d2e2;}
+  .karte .kfeature{
+    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);
+    border-radius:14px;padding:20px 20px;margin-top:14px;
+  }
+  .karte .kfeature h3{
+    font-size:15px;font-weight:800;color:#fff;margin-bottom:6px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .karte .kfeature h3 .dot{width:8px;height:8px;border-radius:50%;background:#e8b9c3;flex:0 0 auto;}
+  .karte .kfeature p{font-size:13px;color:#c0cee0;line-height:1.85;}
+
+  /* CTA */
+  .cta{background:var(--card);text-align:center;}
+  .cta .summary{
+    border:1px solid var(--blue-line);border-radius:16px;background:var(--blue-soft);
+    padding:24px 22px;margin-bottom:28px;text-align:left;
+  }
+  .cta .summary dl{display:grid;grid-template-columns:88px 1fr;}
+  .cta .summary dt{
+    font-size:13px;color:var(--sub);font-weight:700;padding:11px 0;
+    border-top:1px solid var(--blue-line);
+  }
+  .cta .summary dd{
+    font-size:14px;font-weight:700;padding:11px 0;color:var(--navy);line-height:1.65;
+    border-top:1px solid var(--blue-line);
+  }
+  .cta .summary dl > dt:first-of-type,
+  .cta .summary dl > dd:first-of-type{border-top:none;}
+  .cta .summary dd .em{color:var(--pink-deep);}
+  .btn{
+    display:block;width:100%;
+    background:linear-gradient(135deg,#cf8f9c 0%,#bd7886 100%);
+    color:#fff;font-size:16px;font-weight:800;letter-spacing:0.02em;
+    text-decoration:none;padding:21px 18px;border-radius:14px;line-height:1.5;
+    box-shadow:0 8px 20px rgba(189,120,134,0.32);
+  }
+  .btn small{display:block;font-size:11px;font-weight:500;opacity:0.95;margin-top:5px;letter-spacing:0.06em;}
+  .btn.locked{
+    background:linear-gradient(135deg,#cdbfc4 0%,#bcaeb3 100%);
+    box-shadow:0 6px 16px rgba(120,110,114,0.18);cursor:not-allowed;
+  }
+  .cta .countdown{
+    border:1px solid var(--pink-line);background:var(--pink-bg);border-radius:14px;
+    padding:18px 18px 16px;margin-bottom:16px;display:flex;flex-direction:column;align-items:center;gap:6px;
+  }
+  .cta .countdown.open{border-color:var(--blue-line);background:var(--blue-bg);}
+  .cta .cd-label{font-size:12px;font-weight:700;letter-spacing:0.12em;color:var(--pink-deep);}
+  .cta .countdown.open .cd-label{color:var(--navy);}
+  .cta .cd-time{
+    font-size:24px;font-weight:800;letter-spacing:0.02em;color:var(--navy);
+    font-variant-numeric:tabular-nums;
+  }
+  .cta .cd-when{font-size:11.5px;color:var(--sub);letter-spacing:0.04em;}
+  .cta .seatline{margin-top:16px;font-size:12.5px;color:var(--sub);}
+  .cta .seatline b{color:var(--pink-deep);}
+
+  /* footer */
+  footer{background:var(--blue-bg);text-align:center;padding:34px 26px 44px;}
+  footer .logo{
+    font-size:13px;letter-spacing:0.28em;font-weight:700;
+    background:linear-gradient(90deg,#cf8f9c 0%,#a98bbf 50%,#7fb0d2 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;
+  }
+  footer .copy{font-size:11px;color:#a39da1;margin-top:10px;letter-spacing:0.04em;}
+
+  @media(max-width:380px){
+    .hero h1{font-size:27px;}
+    .hero h1 .big{font-size:35px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="brand">Re:che 仕入れコース</div>
+    <div class="label">モニター募集</div>
+    <h1>モニター価格で、<br><span class="em">先着<span class="big">15</span>名さま</span>募集。</h1>
+    <p class="sub">
+      気になっていたけれど、入学のハードルで止まっていた方へ。<br>
+      まずは仕入れの土台から、あなたのペースで整えていきませんか。
+    </p>
+    <div class="openday">受付開始　<b>6月29日（月）朝9:00</b></div>
+    <div class="opennote">この時間になると、お申し込みボタンが押せるようになります</div>
+  </header>
+
+  <!-- 共感 -->
+  <section class="empathy">
+    <div class="eyebrow">FOR YOU</div>
+    <h2 class="title">こんな気持ち、<br>ありませんか。</h2>
+    <div class="divider"></div>
+    <div class="qbox"><p>興味はあるけれど、入学金のところで足が止まってしまった</p></div>
+    <div class="qbox"><p>あれこれ全部ではなく、まずは「仕入れ」だけ始めてみたい</p></div>
+    <div class="qbox"><p>良い仕入れ先を、自分ひとりで探すのが難しいと感じている</p></div>
+    <p class="answer">
+      そんなあなたのための、<br><span class="em">いちばん軽やかな入り口</span>です。
+    </p>
+  </section>
+
+  <!-- できること -->
+  <section class="can">
+    <div class="eyebrow">WHAT YOU CAN DO</div>
+    <h2 class="title">このコースで、<br>できること。</h2>
+    <div class="divider"></div>
+
+    <div class="canitem">
+      <div class="no">1</div>
+      <div>
+        <h3>厳選した仕入れ先を、無期限で自由に</h3>
+        <p>弊社が厳選してご用意した仕入れ先を、期限なく、いつでもご自由にお使いいただけます。探す手間から解放されて、仕入れそのものに集中できますね。</p>
+      </div>
+    </div>
+
+    <div class="canitem">
+      <div class="no">2</div>
+      <div>
+        <h3>参加者同士のオープンチャット</h3>
+        <p>同じ目線でがんばる仲間とつながれる場所をご用意しています。気づきや工夫を交換しながら、ひとりではない安心感の中で進めていけます。</p>
+      </div>
+    </div>
+
+    <div class="canitem">
+      <div class="no">3</div>
+      <div>
+        <h3>専用の公式LINEで講師とやり取り</h3>
+        <p>専用の公式LINEで、講師と直接やり取りができます。連絡がつかなくなる心配がなく、わからないことをそのままにせず進められるのが安心ですね。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 仕入れ先 -->
+  <section class="sources">
+    <div class="eyebrow">SOURCES</div>
+    <h2 class="title">弊社だけの、<br>独占仕入れ先。</h2>
+    <div class="divider"></div>
+
+    <div class="srccard">
+      <span class="ph"><img src="img/shiire_apparel.png" alt="アパレル専門独占卸"></span>
+      <div class="body">
+        <div class="head"><span class="num">01</span><h3>アパレル専門 独占卸</h3></div>
+        <p>売れ筋がパッケージされて届くので、事前のリサーチは不要です。届いたその日から出品をはじめられます。</p>
+        <span class="hl">1着 <b>280円</b>〜 仕入れ可能</span>
+      </div>
+    </div>
+
+    <div class="srccard">
+      <span class="ph"><img src="img/shiire_brand.png" alt="ブランド品独占卸"></span>
+      <div class="body">
+        <div class="head"><span class="num">02</span><h3>ブランド品 独占卸</h3></div>
+        <p>ハイブランドからミドルブランドまで。バッグ・小物・香水・コスメなど、上質なお品を仕入れていただけます。</p>
+      </div>
+    </div>
+
+    <div class="srccard">
+      <span class="ph"><img src="img/shiire_bookoff.png" alt="ブックオフ独占卸"></span>
+      <div class="body">
+        <div class="head"><span class="num">03</span><h3>ブックオフ 独占卸</h3></div>
+        <p>少ない資金からでも、大きな利益を狙えるパックをご用意。はじめの一歩を踏み出しやすい仕入れ先です。</p>
+      </div>
+    </div>
+
+    <div class="srccard">
+      <span class="ph"><img src="img/shiire_hirota.png" alt="ヒロタアパレル 新品未使用卸"></span>
+      <div class="body">
+        <div class="head"><span class="num">04</span><h3>ヒロタアパレル 新品未使用卸</h3></div>
+        <p>完全新品のお品を、1点から仕入れていただけます。在庫を抱えすぎず、大人可愛いデザインからスタートできます。</p>
+      </div>
+    </div>
+
+    <div class="srccard">
+      <span class="ph"><img src="img/shiire_reche_collection.png" alt="Re:cheコレクション"></span>
+      <div class="body">
+        <div class="head"><span class="num">05</span><h3>Re:che コレクション</h3></div>
+        <p>講師がセレクト・撮影・文章まで仕上げた商品が並ぶ公式コレクション。整ったお品から、手間をかけずに始められます。</p>
+        <span class="hl">掲載商品が <b>半額</b> で仕入れ可能<br><a href="https://www.reche.shop/" target="_blank" rel="noopener">www.reche.shop</a></span>
+      </div>
+    </div>
+
+    <div class="srccard">
+      <span class="ph"><img src="img/shiire_other.png" alt="その他の新品未使用アパレル仕入れ"></span>
+      <div class="body">
+        <div class="head"><span class="num">06</span><h3>その他の新品未使用アパレル</h3></div>
+        <p>上記のほかにも、新品未使用のアパレル仕入れを不定期でご提供しています。仕入れの選択肢が、どんどん広がっていきます。</p>
+      </div>
+    </div>
+
+    <p class="note">すべて無期限・自由にご利用いただけます</p>
+  </section>
+
+  <!-- 特典 -->
+  <section class="bonus">
+    <div class="eyebrow">SPECIAL OFFER</div>
+    <h2 class="title">モニター限定の、<br>4つの特典。</h2>
+    <div class="divider"></div>
+    <span class="openpill">受付開始　6月29日（月）朝9:00</span>
+
+    <div class="bcard">
+      <span class="tag">特典 01</span>
+      <h3>30日間の<span class="em">集中サポート</span></h3>
+      <p>はじめの30日間を、しっかり伴走します。最初のつまずきを越えられるよう、いちばん大切な立ち上がりの時期に寄り添います。</p>
+    </div>
+
+    <div class="bcard">
+      <span class="tag">特典 02</span>
+      <h3>入学金 <span class="em">11万円引き</span></h3>
+      <p>足が止まりやすい入学金のハードルを、今回のモニター価格として大きく下げてご用意しました。</p>
+      <p class="price"><s>通常 入学金</s>今回限り <b>−110,000円</b></p>
+    </div>
+
+    <div class="bcard">
+      <span class="tag">特典 03</span>
+      <h3>3万円相当の<span class="em">スターターパック</span></h3>
+      <p>アパレル・ブランド品が入った、3万円相当のスターターパックをお届けします。届いたその日から、実際に手を動かして始められますね。</p>
+    </div>
+
+    <div class="bcard">
+      <span class="tag">特典 04</span>
+      <h3>個人専用の<span class="em">カルテシート</span></h3>
+      <p>あなただけの記録・分析シートをお渡しします。AIを搭載しており、毎日の入力や手法を記録するだけで、仕入れの傾向や1日の目標出品数までを自動で整理してくれます。</p>
+      <p class="price" style="color:var(--navy);font-size:13px;margin-top:8px;">＋ このカルテを使った30日間のサポートプログラム付き（今回限定）</p>
+    </div>
+  </section>
+
+  <!-- カルテ深掘り -->
+  <section class="karte">
+    <div class="eyebrow">AI KARTE</div>
+    <h2 class="title">記録するだけで、<br>自分の「型」が見えてくる。</h2>
+    <div class="divider"></div>
+    <p class="lead">毎日をただ記録するだけ。あとはカルテが、あなたの傾向をそっと言語化してくれます。</p>
+
+    <div class="kfeature">
+      <h3><span class="dot"></span>毎日の入力は、ほんの数分</h3>
+      <p>その日の仕入れと手法を書き込むだけ。むずかしい操作はいりません。続けられる軽さにこだわりました。</p>
+    </div>
+    <div class="kfeature">
+      <h3><span class="dot"></span>仕入れの傾向を自動で分析</h3>
+      <p>あなたがどんな商品・どんな手法で結果を出しやすいのか。AIが記録から傾向を読み取り、整理してくれます。</p>
+    </div>
+    <div class="kfeature">
+      <h3><span class="dot"></span>1日の目標出品数まで提案</h3>
+      <p>あなたのペースに合わせて、無理のない1日の目標出品数を提案。がんばりどころが、はっきり見えてきます。</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="eyebrow">ENTRY</div>
+    <h2 class="title">仕入れから、<br>はじめてみませんか。</h2>
+    <div class="divider"></div>
+
+    <div class="summary">
+      <dl>
+        <dt>コース名</dt><dd>Re:che 仕入れコース</dd>
+        <dt>募集</dt><dd>モニター価格／<span class="em">先着15名さま</span></dd>
+        <dt>受付開始</dt><dd><span class="em">6月29日（月）朝9:00</span></dd>
+        <dt>仕入れ先</dt><dd>厳選した独占卸を無期限・自由に利用可</dd>
+        <dt>サポート</dt><dd>専用公式LINE＋オープンチャット</dd>
+        <dt>特典</dt><dd>集中サポート・入学金11万円引き・スターターパック・AIカルテ</dd>
+      </dl>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <span class="cd-label">受付開始まで</span>
+      <span class="cd-time" id="cdTime">— 日 — : — : —</span>
+      <span class="cd-when">6月29日（月）朝9:00 解禁</span>
+    </div>
+
+    <a class="btn locked" id="ctaBtn" href="javascript:void(0)" aria-disabled="true">
+      <span id="ctaText">受付開始までお待ちください</span>
+      <small id="ctaSub">6月29日（月）朝9:00 から押せるようになります</small>
+    </a>
+    <p class="seatline">定員に達し次第、受付を終了いたします。<br><b>気になる方は、お早めにご検討くださいね。</b></p>
+  </section>
+
+  <footer>
+    <div class="logo">Re:che</div>
+    <div class="copy">© Merone Inc. All rights reserved.</div>
+  </footer>
+
+</div>
+
+<script>
+  // 受付解禁：2026年6月29日（月）朝9:00（日本時間）= 2026-06-29 00:00 UTC
+  var OPEN_TS = Date.UTC(2026, 5, 29, 0, 0, 0);
+  var CTA_URL = "https://inzwuip2.autosns.app/line";
+  var OPEN_TEXT = "仕入れコースについての詳細を見て、<br>モニター詳細を確認する";
+
+  var btn = document.getElementById('ctaBtn');
+  var ctaText = document.getElementById('ctaText');
+  var ctaSub = document.getElementById('ctaSub');
+  var cd = document.getElementById('countdown');
+  var cdTime = document.getElementById('cdTime');
+  var opened = false;
+
+  // 解禁前はクリックを無効化
+  btn.addEventListener('click', function(e){
+    if (btn.classList.contains('locked')) { e.preventDefault(); }
+  });
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+
+  function openCTA(){
+    opened = true;
+    btn.classList.remove('locked');
+    btn.removeAttribute('aria-disabled');
+    btn.setAttribute('href', CTA_URL);
+    btn.setAttribute('target', '_blank');
+    btn.setAttribute('rel', 'noopener');
+    ctaText.innerHTML = OPEN_TEXT;
+    ctaSub.textContent = '先着15名さま限定';
+    cd.classList.add('open');
+    cd.querySelector('.cd-label').textContent = 'ただいま受付中です';
+    cdTime.textContent = 'お申し込みはこちらから';
+    cd.querySelector('.cd-when').textContent = 'モニター価格・先着15名さま';
+  }
+
+  function tick(){
+    var diff = OPEN_TS - Date.now();
+    if (diff <= 0){
+      if (!opened) openCTA();
+      return;
+    }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    cdTime.textContent = d + ' 日 ' + pad(h) + ' : ' + pad(m) + ' : ' + pad(s);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+</script>
+</body>
+</html>
